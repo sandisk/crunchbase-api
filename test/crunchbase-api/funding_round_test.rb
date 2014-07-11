@@ -5,7 +5,6 @@ describe 'FundingRound', :vcr do
   it 'should retrieve funding round by uuid' do
     c = Crunchbase::FundingRound.get '37bd05f961af726ba3c1b279da842805'
     c.permalink.must_equal '37bd05f961af726ba3c1b279da842805'
-    c.post_money_valuation_currency_code.must_equal 'USD'
     c.funding_type.must_equal 'private_equity'
     c.money_raised.must_equal 1500000000
     c.money_raised_currency_code.must_equal 'USD'

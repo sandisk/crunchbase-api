@@ -121,7 +121,7 @@ Relationships: `acquirer`, `acquiree`.
 
 **Ipo.get** – Retrieve information about IPO by uuid
 ```ruby
-Crunchbase::Ipo.get uuid
+Crunchbase::Ipo.get(uuid)
 ```
 Properties: `name`, `permalink`, `opening_share_price`, `opening_share_price_currency_code`, `stock_symbol`,  `stock_exchange_symbol`, `went_public_on`, `canonical_currency_code`, `money_raised`, `money_raised_currency_code`, `opening_valuation`, `opening_valueation_currency_code`, `created_at`, `updated_at`.
 

@@ -6,7 +6,6 @@ describe 'Organization', :vcr do
     c = Crunchbase::Organization.get 'facebook'
     c.name.must_equal 'Facebook'
     c.permalink.must_equal 'facebook'
-    c.role_company.must_equal true
     c.description.wont_be_empty
     c.short_description.wont_be_empty
     c.homepage_url.must_include 'facebook.com'

@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["m@sandis.lv"]
   spec.summary       = %q{Wrapper for Crunchbase API v2}
   spec.description   = ""
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/sandisk/crunchbase-api"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -24,4 +24,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "webmock"
   spec.add_development_dependency "minitest"
   spec.add_development_dependency "vcr"
+  spec.add_development_dependency "minitest-vcr"
 end

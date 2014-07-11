@@ -12,5 +12,9 @@ end
 
 MinitestVcr::Spec.configure!
 
-api_config = YAML.load_file File.join(File.dirname(__FILE__), 'user_key.yml')
-Crunchbase.user_key = api_config['user_key']
+if ENV['CRUNCHBASE_USER_KEY']
+  Crunchbase.user_key = ENV['CRUNCHBASE_USER_KEY']
+else
+  api_config = YAML.load_file File.join(File.dirname(__FILE__), 'user_key.yml')
+  Crunchbase.user_key = api_config['user_key']
+end
