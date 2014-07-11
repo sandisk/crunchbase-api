@@ -1,6 +1,8 @@
 # Crunchbase API
-
-An API wrapper for [Crunchbase API](https://developer.crunchbase.com/docs) version 2.
+[![Gem Version](https://badge.fury.io/rb/crunchbase-api.svg)](http://badge.fury.io/rb/crunchbase-api)
+[![Build Status](https://travis-ci.org/sandisk/crunchbase-api.svg?branch=master)](https://travis-ci.org/sandisk/crunchbase-api)
+[![Code Climate](https://codeclimate.com/github/sandisk/crunchbase-api.png)](https://codeclimate.com/github/sandisk/crunchbase-api)
+Ruby API wrapper for [Crunchbase API](https://developer.crunchbase.com/docs) version 2.
 
 ## Installation
 
