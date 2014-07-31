@@ -14,7 +14,6 @@ describe 'Organization', :vcr do
     c.number_of_investments.must_be_instance_of Fixnum
     c.number_of_employees.must_be_instance_of Fixnum
     c.stock_symbol.must_equal 'FB'
-    c.stock_exchange.must_equal 'NASDAQ'
     c.created_at.must_be_instance_of Time
     c.updated_at.must_be_instance_of Time
   end
