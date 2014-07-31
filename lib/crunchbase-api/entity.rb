@@ -1,6 +1,3 @@
-require 'net/http'
-require 'json'
-require 'cgi'
 require 'date'
 
 module Crunchbase
