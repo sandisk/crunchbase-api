@@ -37,6 +37,18 @@ module Crunchbase
       self.fetch_list page, order
     end
 
+    def self.domain_name(q, page = 1)
+      self.fetch_list(page, ORDER_CREATED_AT_DESC, { domain_name:q })
+    end
+
+    def self.query(q, page = 1)
+      self.fetch_list(page, ORDER_CREATED_AT_DESC, { query:q })
+    end
+
+    def self.name(q, page = 1)
+      self.fetch_list(page, ORDER_CREATED_AT_DESC, { name:q })
+    end
+
     private
 
     def property_keys
