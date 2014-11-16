@@ -9,7 +9,7 @@ describe 'Organization', :vcr do
     c.description.wont_be_empty
     c.short_description.wont_be_empty
     c.homepage_url.must_include 'facebook.com'
-    c.founded_on.must_equal Date.new(2004, 02, 01)
+    c.founded_on.must_equal Date.new(2004, 02, 04)
     c.total_funding_usd.must_be_instance_of Fixnum
     c.number_of_investments.must_be_instance_of Fixnum
     c.number_of_employees.must_be_instance_of Fixnum
