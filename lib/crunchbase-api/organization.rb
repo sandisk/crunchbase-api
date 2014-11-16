@@ -22,12 +22,29 @@ module Crunchbase
     attr_reader :created_at
     attr_reader :updated_at
 
+
     attr_reader :competitors
     attr_reader :funding_rounds
     attr_reader :founders
     attr_reader :products
     attr_reader :acquisitions
     attr_reader :ipo
+    attr_reader :headquarters
+    attr_reader :board_members_and_advisors
+    attr_reader :categories
+    attr_reader :current_team
+    attr_reader :customers
+    attr_reader :images
+    attr_reader :investments
+    attr_reader :members
+    attr_reader :news
+    attr_reader :offices
+    attr_reader :past_team
+    attr_reader :primary_image
+    attr_reader :sub_organizations
+    attr_reader :websites
+
+
 
     def self.get(permalink)
       self.fetch_one permalink
@@ -35,6 +52,18 @@ module Crunchbase
 
     def self.list(page = 1, order = ORDER_CREATED_AT_DESC)
       self.fetch_list page, order
+    end
+
+    def self.find_all_by_domain_name(q, page = 1)
+      self.fetch_list(page, ORDER_CREATED_AT_DESC, { domain_name:q })
+    end
+
+    def self.find_all_by_query(q, page = 1)
+      self.fetch_list(page, ORDER_CREATED_AT_DESC, { query:q })
+    end
+
+    def self.find_all_by_name(q, page = 1)
+      self.fetch_list(page, ORDER_CREATED_AT_DESC, { name:q })
     end
 
     private
@@ -52,7 +81,7 @@ module Crunchbase
 
     def relationships
       %w[
-        competitors funding_rounds founders products acquisitions ipo
+        competitors funding_rounds founders products acquisitions ipo headquarters board_members_and_advisors categories current_team customers images investments members news offices past_team primary_image sub_organizations websites
       ]
     end
 

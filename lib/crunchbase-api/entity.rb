@@ -16,8 +16,8 @@ module Crunchbase
       self.new Crunchbase::fetch("#{self::RESOURCE_FIND}/#{permalink}")
     end
 
-    def self.fetch_list(page = 1, order = ORDER_CREATED_AT_DESC)
-      r = Crunchbase::fetch(self::RESOURCE_LIST, {page: page, order: order})['items']
+    def self.fetch_list(page = 1, order = ORDER_CREATED_AT_DESC, params = {})
+      r = Crunchbase::fetch(self::RESOURCE_LIST, params.merge(page: page, order: order))['items']
       r.map { |i| Relation.new i }
     end
 

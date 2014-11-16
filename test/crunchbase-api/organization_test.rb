@@ -2,6 +2,27 @@ require 'helper'
 
 describe 'Organization', :vcr do
 
+  it 'should retrieve organization by domain' do
+    relation = Crunchbase::Organization.find_by_all_domain_name('facebook.com').first
+    c = relation.fetch
+    c.must_be_instance_of Crunchbase::Organization
+    c.name.must_equal 'Facebook'
+  end
+
+  it 'should retrieve organization by name' do
+    relation = Crunchbase::Organization.find_all_by_name('Facebook').first
+    c = relation.fetch
+    c.must_be_instance_of Crunchbase::Organization
+    c.name.must_equal 'Facebook'
+  end
+
+  it 'should retrieve organization by query' do
+    relation = Crunchbase::Organization.find_all_by_query('Faceboo').first
+    c = relation.fetch
+    c.must_be_instance_of Crunchbase::Organization
+    c.name.must_equal 'Facebook'
+  end
+
   it 'should retrieve organization by permalink' do
     c = Crunchbase::Organization.get 'facebook'
     c.name.must_equal 'Facebook'
