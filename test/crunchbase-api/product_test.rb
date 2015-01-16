@@ -4,8 +4,6 @@ describe 'Product', :vcr do
 
   it 'should retrieve product by permalink' do
     c = Crunchbase::Product.get 'digg'
-    c.lifecycle_stage.wont_be_empty
-    c.owner_id.wont_be_empty
     c.description.wont_be_empty
     c.name.must_equal 'Digg'
     c.permalink.must_equal 'digg'

@@ -6,7 +6,6 @@ describe 'IPO', :vcr do
     c.opening_share_price.must_equal '38.0'
     c.opening_share_price_currency_code.must_equal 'USD'
     c.stock_symbol.must_equal 'FB'
-    c.stock_exchange_symbol.must_equal 'NASDAQ'
     c.went_public_on.must_equal Date.new(2012, 5, 18)
     c.canonical_currency_code.must_equal 'USD'
     c.money_raised.must_equal 18400000000
