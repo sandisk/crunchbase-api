@@ -3,7 +3,7 @@ module Crunchbase
 
     OPTIONS = [:user_key, :api_endpoint].freeze
     USER_KEY = nil
-    API_ENDPOINT = 'http://api.crunchbase.com/v/2'
+    API_ENDPOINT = 'https://api.crunchbase.com/v/2'
 
     attr_accessor *OPTIONS
 

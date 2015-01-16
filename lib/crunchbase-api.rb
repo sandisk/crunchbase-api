@@ -26,21 +26,25 @@ module Crunchbase
 
     def fetch(resource, data = {})
       data[:user_key] = self.user_key
-      uri = "#{self.api_endpoint}/#{resource}?"
-      uri << data.map { |k, v| "#{URI::escape(k.to_s)}=#{URI::escape(v.to_s)}" }.join('&')
+      uri_str = "#{self.api_endpoint}/#{resource}?"
+      uri_str << data.map { |k, v| "#{URI::escape(k.to_s)}=#{URI::escape(v.to_s)}" }.join('&')
 
       begin
-        response = Net::HTTP.get_response(URI.parse uri)
+        uri = URI.parse(uri_str)
+        http = Net::HTTP.new(uri.host, uri.port)
+        http.use_ssl = true
+        request = Net::HTTP::Get.new(uri.request_uri)
+        response = http.request(request)
         raise CrunchbaseException, response.body.to_s unless response.code.to_i == 200
         body = response.body.to_s
       rescue => e
-        raise CrunchbaseException, "Failed to fetch #{uri}: #{e}"
+        raise CrunchbaseException, "Failed to fetch #{uri_str}: #{e}"
       end
 
       begin
         response = JSON.parse body
       rescue => e
-        raise CrunchbaseException, "Failed to parse response for #{uri}: #{e}"
+        raise CrunchbaseException, "Failed to parse response for #{uri_str}: #{e}"
       end
 
       if response['data']['error'] and response['data']['error']['message']
