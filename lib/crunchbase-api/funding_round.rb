@@ -8,8 +8,10 @@ module Crunchbase
     attr_reader :permalink
     attr_reader :funding_type
     attr_reader :money_raised
+    attr_reader :money_raised_usd
     attr_reader :money_raised_currency_code
     attr_reader :announced_on
+    attr_reader :announced_on_trust_code
     attr_reader :canonical_currency_code
     attr_reader :created_at
     attr_reader :updated_at
@@ -27,6 +29,7 @@ module Crunchbase
       %w[
         name permalink funding_type money_raised money_raised_currency_code
         announced_on canonical_currency_code created_at updated_at series
+        announced_on_trust_code money_raised_usd
       ]
     end
 
