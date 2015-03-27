@@ -13,6 +13,7 @@ module Crunchbase
     attr_reader :canonical_currency_code
     attr_reader :created_at
     attr_reader :updated_at
+    attr_reader :series
 
     attr_reader :funded_organization
 
@@ -25,7 +26,7 @@ module Crunchbase
     def property_keys
       %w[
         name permalink funding_type money_raised money_raised_currency_code
-        announced_on canonical_currency_code created_at updated_at
+        announced_on canonical_currency_code created_at updated_at series
       ]
     end
 
