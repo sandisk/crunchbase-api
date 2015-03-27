@@ -46,8 +46,6 @@ module Crunchbase
     attr_reader :primary_image
     attr_reader :sub_organizations
     attr_reader :websites
-    attr_reader :investors
-
 
 
     def self.get(permalink)
@@ -86,7 +84,7 @@ module Crunchbase
 
     def relationships
       %w[
-        competitors funding_rounds founders products acquisitions ipo headquarters board_members_and_advisors categories current_team customers images investments members news offices past_team primary_image sub_organizations websites investors
+        competitors funding_rounds founders products acquisitions ipo headquarters board_members_and_advisors categories current_team customers images investments members news offices past_team primary_image sub_organizations websites
       ]
     end
 
