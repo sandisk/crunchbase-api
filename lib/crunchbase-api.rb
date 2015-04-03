@@ -1,6 +1,7 @@
 require 'uri'
 require 'net/http'
 require 'json'
+require 'cgi'
 
 require 'crunchbase-api/configuration'
 require 'crunchbase-api/crunchbase_exception'
@@ -27,7 +28,7 @@ module Crunchbase
     def fetch(resource, data = {})
       data[:user_key] = self.user_key
       uri_str = "#{self.api_endpoint}/#{resource}?"
-      uri_str << data.map { |k, v| "#{URI::escape(k.to_s)}=#{URI::escape(v.to_s)}" }.join('&')
+      uri_str << data.map { |k, v| "#{CGI::escape(k.to_s)}=#{CGI::escape(v.to_s)}" }.join('&')
 
       begin
         uri = URI.parse(uri_str)
