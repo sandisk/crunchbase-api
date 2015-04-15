@@ -16,11 +16,6 @@ module Crunchbase
       @type = data['type']
       @name = data['name']
       @path = data['path']
-      @money_invested = data['money_invested'] unless data['money_invested'].nil?
-      @money_invested_usd = data['money_invested_usd'] unless data['money_invested_usd'].nil?
-      @money_raised_currency_code = data['money_invested_currency_code'] unless data['money_invested_currency_code'].nil?
-      @investors = data['investors'] unless data['investors'].nil?
-
       @created_at = Time.at(data['created_at']) unless data['created_at'].nil?
       @updated_at = Time.at(data['updated_at']) unless data['updated_at'].nil?
     end
