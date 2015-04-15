@@ -41,9 +41,9 @@ describe 'Organization', :vcr do
 
   it 'should retrieve a list of organizations' do
     c = Crunchbase::Organization.list
-    c.size.must_equal 1000
+    c.size.must_equal 5000
     c.first.must_be_instance_of Crunchbase::Relation
-    c.first.type.must_equal 'Organization'
+    c.first.type.must_equal 'organization'
     c.first.name.wont_be_empty
     c.first.path.wont_be_empty
     c.first.created_at.must_be_instance_of Time

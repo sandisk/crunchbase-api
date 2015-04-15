@@ -8,7 +8,6 @@ describe 'FundingRound', :vcr do
     c.funding_type.must_equal 'private_equity'
     c.money_raised.must_equal 1500000000
     c.money_raised_currency_code.must_equal 'USD'
-    c.series = 'a'
     c.announced_on.must_equal Date.new(2011, 1, 21)
     c.canonical_currency_code.must_equal 'USD'
     c.permalink.wont_be_empty

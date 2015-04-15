@@ -13,9 +13,9 @@ describe 'Product', :vcr do
 
   it 'should retrieve a list of products' do
     c = Crunchbase::Product.list
-    c.size.must_equal 1000
+    c.size.must_equal 5000
     c.first.must_be_instance_of Crunchbase::Relation
-    c.first.type.must_equal 'Product'
+    c.first.type.must_equal 'product'
     c.first.name.wont_be_empty
     c.first.path.wont_be_empty
     c.first.created_at.must_be_instance_of Time

@@ -22,11 +22,11 @@ module Crunchbase
 
     def fetch
       supported_relations = %w[Organization Person Product FundingRound Acquisition Ipo InvestorInvestment]
-      unless supported_relations.include?(@type)
+      unless supported_relations.include?(@type.capitalize)
         raise CrunchbaseException, "Fetching of '#{@type}' relations is not supported at this time"
       end
       result = Crunchbase.fetch @path
-      Crunchbase.const_get(@type).new result
+      Crunchbase.const_get(@type.capitalize).new result
     end
 
   end
