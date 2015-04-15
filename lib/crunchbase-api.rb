@@ -2,6 +2,7 @@ require 'uri'
 require 'cgi'
 require 'net/http'
 require 'json'
+require 'cgi'
 
 require 'crunchbase-api/configuration'
 require 'crunchbase-api/crunchbase_exception'
