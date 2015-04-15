@@ -21,6 +21,9 @@ module Crunchbase
     attr_reader :stock_exchange
     attr_reader :created_at
     attr_reader :updated_at
+    attr_reader :role_company
+    attr_reader :founded_on_trust_code
+    attr_reader :closed_on_trust_code
 
 
     attr_reader :competitors
@@ -43,7 +46,6 @@ module Crunchbase
     attr_reader :primary_image
     attr_reader :sub_organizations
     attr_reader :websites
-
 
 
     def self.get(permalink)
@@ -72,6 +74,7 @@ module Crunchbase
       %w[
         description short_description founded_on permalink primary_role is_closed closed_on homepage_url
         name created_at updated_at total_funding_usd number_of_investments number_of_employees stock_symbol stock_exchange
+        role_company founded_on_trust_code closed_on_trust_code
       ]
     end
 
