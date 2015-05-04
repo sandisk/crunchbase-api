@@ -63,7 +63,9 @@ Failed requests (such as the ones requesting non-existent entities) will throw `
 ```ruby
 Crunchbase::Organization.get(permalink)
 ```
-Properties: `name`, `permalink`, `description`, `short_description`, `homepage_url`, `founded_on`, `is_closed`, `closed_on`, `primary_role`, `total_funding_usd`, `number_of_investments`, `number_of_employees`, `stock_symbol`, `stock_exchange`, `created_at`, `updated_at`.
+Properties: `name`, `permalink`, `description`, `short_description`, `homepage_url`, `founded_on`, `is_closed`, `closed_on`, `primary_role`, `total_funding_usd`, `number_of_investments`, `number_of_employees`,
+`stock_symbol`, `stock_exchange`, `role_company`, `founded_on_trust_code`, `closed_on_trust_code`, `headquarters`, `board_members_and_advisors`, `categories`, `current_team`, `customers`, `images`, `investments`,
+`members`, `news`, `offices`, `past_team`, `primary_image`, `sub_organizations`, `websites`, `created_at`, `updated_at`.
 
 Relationships: `competitors`, `funding_rounds`, `founders`, `products`, `acquisitions`, `ipo`.
 
@@ -110,7 +112,7 @@ Crunchbase::Product.list(page, order)
 ```ruby
 Crunchbase::FundingRound.get(uuid)
 ```
-Properties: `name`, `permalink`, `funding_type`, `money_raised`, `money_raised_currency_code`,  `announced_on`, `canonical_currency_code`, `created_at`, `updated_at`.
+Properties: `name`, `permalink`, `funding_type`, `money_raised`, `money_raised_usd`, `money_raised_currency_code`, `announced_on`, `announced_on_trust_code`, `canonical_currency_code`, `series`, `created_at`, `updated_at`.
 
 Relationships: `funded_organization`.
 
