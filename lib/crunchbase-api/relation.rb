@@ -16,8 +16,8 @@ module Crunchbase
       @type = data['type']
       @name = data['name']
       @path = data['path']
-      @created_at = Time.at(data['created_at']) unless data['created_at'].nil?
-      @updated_at = Time.at(data['updated_at']) unless data['updated_at'].nil?
+      @created_at = Time.at(data['created_at'].to_i) unless data['created_at'].nil?
+      @updated_at = Time.at(data['updated_at'].to_i) unless data['updated_at'].nil?
     end
 
     def fetch
