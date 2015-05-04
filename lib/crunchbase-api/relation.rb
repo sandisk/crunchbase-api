@@ -21,7 +21,7 @@ module Crunchbase
     end
 
     def fetch
-      supported_relations = %w[Organization Person Product FundingRound Acquisition Ipo InvestorInvestment]
+      supported_relations = %w[Organization Person Product FundingRound Acquisition Ipo]
       unless supported_relations.include?(@type.capitalize)
         raise CrunchbaseException, "Fetching of '#{@type}' relations is not supported at this time"
       end

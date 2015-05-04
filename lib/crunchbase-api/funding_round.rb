@@ -18,7 +18,6 @@ module Crunchbase
     attr_reader :series
 
     attr_reader :funded_organization
-    attr_reader :investments
 
     def self.get(uuid)
       self.fetch_one uuid
@@ -39,7 +38,7 @@ module Crunchbase
     end
 
     def relationships
-      %w[funded_organization investments]
+      %w[funded_organization]
     end
 
   end

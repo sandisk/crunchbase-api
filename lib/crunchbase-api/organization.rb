@@ -84,7 +84,7 @@ module Crunchbase
 
     def relationships
       %w[
-        competitors funding_rounds founders products acquisitions ipo headquarters board_members_and_advisors categories current_team customers images investments members news offices past_team primary_image sub_organizations websites
+        competitors funding_rounds founders products acquisitions ipo
       ]
     end
 
