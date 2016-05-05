@@ -5,6 +5,9 @@
 
 Ruby API wrapper for [Crunchbase API](https://developer.crunchbase.com/docs) version 2.
 
+## Deprecated
+Please note that the Crunchbase API v2.0 was shut down on May 31st, 2015, and as such this gem is no longer functional.
+
 ## Installation
 
 Add this line to your application's Gemfile:
