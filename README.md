@@ -1,4 +1,5 @@
 # Crunchbase API
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3df0ae3e81334b36afe1cabd18db40d2)](https://www.codacy.com/app/sandisk/crunchbase-api?utm_source=github.com&utm_medium=referral&utm_content=sandisk/crunchbase-api&utm_campaign=badger)
 [![Gem Version](https://badge.fury.io/rb/crunchbase-api.svg)](http://badge.fury.io/rb/crunchbase-api)
 [![Build Status](https://travis-ci.org/sandisk/crunchbase-api.svg?branch=master)](https://travis-ci.org/sandisk/crunchbase-api)
 [![Code Climate](https://codeclimate.com/github/sandisk/crunchbase-api.png)](https://codeclimate.com/github/sandisk/crunchbase-api)
